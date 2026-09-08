@@ -1,0 +1,30 @@
+name: Deploy
+
+# No scheduled rebuild -- unlike the family's other sites, this page has no
+# portfolio-api content to go stale (it's a fixed set of links), so a push
+# is the only thing that should ever redeploy it.
+on:
+  push:
+    branches: [main]
+  workflow_dispatch:
+
+jobs:
+  deploy:
+    runs-on: ubuntu-latest
+    permissions:
+      contents: read
+    steps:
+      - uses: actions/checkout@v5
+
+      - uses: actions/setup-node@v5
+        with:
+          node-version: 22
+
+      - run: npm ci
+
+      - run: npm run build
+
+      - uses: cloudflare/wrangler-action@v3
+        with:
+          apiToken: ${{ secrets.CLOUDFLARE_API_TOKEN }}
+          command: deploy

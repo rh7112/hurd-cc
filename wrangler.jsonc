@@ -1,0 +1,21 @@
+{
+	"$schema": "node_modules/wrangler/config-schema.json",
+	"name": "hurd-cc",
+	"compatibility_date": "2026-09-08",
+	"account_id": "7ceef36ac9912fb68e8b31dc4634db5b",
+	"routes": [
+		{
+			"pattern": "hurd.cc",
+			"zone_name": "hurd.cc",
+			"custom_domain": true
+		},
+		{
+			"pattern": "www.hurd.cc",
+			"zone_name": "hurd.cc",
+			"custom_domain": true
+		}
+	],
+	"assets": {
+		"directory": "dist"
+	}
+}
