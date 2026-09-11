@@ -16,6 +16,16 @@ const sites = [
     href: 'https://blog.hurd.cc',
     description: 'Family notes, projects, and the occasional recipe.',
   },
+  {
+    name: "Ramona's portfolio",
+    href: 'https://ramona.bauch.cc',
+    description: "Ryan's mother -- PA-C.",
+  },
+  {
+    name: "Braden's portfolio",
+    href: 'https://braden.tucker.bid',
+    description: "Ryan's step-son -- Bourbon Street Pizza.",
+  },
 ]
 
 function App() {
