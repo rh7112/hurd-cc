@@ -43,6 +43,7 @@ h1,
 h2 {
   font-family: var(--sans);
   font-weight: 600;
+  line-height: 1.2;
   color: var(--text-h);
   margin: 0;
 }

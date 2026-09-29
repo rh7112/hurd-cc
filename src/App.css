@@ -32,9 +32,26 @@
   color: var(--text);
 }
 
-.sites {
+.block {
   width: 100%;
   max-width: 56rem;
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+}
+
+.block-heading h2 {
+  font-size: 1.5rem;
+}
+
+.block-heading p {
+  margin-top: 0.35rem;
+  color: var(--text);
+  font-size: 1rem;
+}
+
+.sites {
+  width: 100%;
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(15rem, 1fr));
   gap: 1.25rem;
@@ -58,6 +75,12 @@
   transform: translateY(-2px);
 }
 
+.site-card h3 {
+  font-size: 1.1rem;
+  font-weight: 600;
+  color: var(--text-h);
+}
+
 .site-card p {
   color: var(--text);
   font-size: 0.95rem;
@@ -69,6 +92,49 @@
   font-size: 0.85rem;
   font-weight: 600;
   color: var(--accent);
+  text-decoration: none;
+}
+
+.services {
+  width: 100%;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(18rem, 1fr));
+  gap: 1.25rem;
+}
+
+.service-card {
+  display: flex;
+  flex-direction: column;
+  border-radius: 1.25rem;
+  border: 1px solid var(--border);
+  background: var(--card-bg);
+  overflow: hidden;
+}
+
+.service-card img {
+  width: 100%;
+  aspect-ratio: 4 / 3;
+  object-fit: cover;
+  display: block;
+}
+
+.service-card-body {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+  padding: 1.75rem;
+}
+
+.service-card-body h3 {
+  font-size: 1.1rem;
+  font-weight: 600;
+  color: var(--text-h);
+}
+
+.service-card-body p {
+  color: var(--text);
+  font-size: 0.95rem;
+  line-height: 1.5;
 }
 
 hurd-footer {
