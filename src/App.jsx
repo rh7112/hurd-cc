@@ -19,12 +19,12 @@ const works = [
   {
     name: "Ramona's portfolio",
     href: 'https://ramona.bauch.cc',
-    description: "Ryan's mother -- PA-C.",
+    description: 'Portfolio for Ramona Bauch, PA-C -- a Physician Assistant serving Northeastern Indiana.',
   },
   {
     name: "Braden's portfolio",
     href: 'https://braden.tucker.bid',
-    description: "Ryan's step-son -- Bourbon Street Pizza.",
+    description: 'Portfolio for Braden Tucker -- Bourbon Street Pizza, Bourbon, IN.',
   },
 ]
 
