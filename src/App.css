@@ -75,6 +75,30 @@
   transform: translateY(-2px);
 }
 
+.site-card-static:hover {
+  border-color: var(--border);
+  transform: none;
+}
+
+.cta-button {
+  align-self: center;
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  padding: 0.85rem 1.75rem;
+  border-radius: 999px;
+  background: var(--accent);
+  color: var(--bg);
+  font-weight: 600;
+  font-size: 0.95rem;
+  text-decoration: none;
+  transition: opacity 0.15s;
+}
+
+.cta-button:hover {
+  opacity: 0.85;
+}
+
 .site-card h3 {
   font-size: 1.1rem;
   font-weight: 600;

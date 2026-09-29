@@ -109,17 +109,15 @@ function App() {
         </div>
         <div className="sites">
           {offeredServices.map((service) => (
-            <a
-              key={service.name}
-              className="site-card"
-              href={`mailto:ryan@hurd.cc?subject=${encodeURIComponent(service.name + ' Inquiry')}`}
-            >
+            <article key={service.name} className="site-card site-card-static">
               <h3>{service.name}</h3>
               <p>{service.description}</p>
-              <span className="visit">Get in touch &rarr;</span>
-            </a>
+            </article>
           ))}
         </div>
+        <a className="cta-button" href="mailto:ryan@hurd.cc?subject=Service%20Inquiry">
+          Get in touch &rarr;
+        </a>
       </section>
 
       <section className="block" aria-label="Works">
