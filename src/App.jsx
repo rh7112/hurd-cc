@@ -154,7 +154,7 @@ function App() {
         </div>
       </section>
 
-      <hurd-footer tagline="Hurd Craft Co. LLC" link-href="https://hurd.cc"></hurd-footer>
+      <hurd-footer tagline="Hurd Craft Co. LLC"></hurd-footer>
     </main>
   )
 }
