@@ -28,6 +28,39 @@ const works = [
   },
 ]
 
+const offeredServices = [
+  {
+    name: 'Website Development',
+    description:
+      'Custom websites built with modern frameworks (React, Next.js, Svelte) -- from small business marketing sites to full web apps.',
+  },
+  {
+    name: 'SEO Optimization',
+    description: 'Structured data, meta tags, and technical fundamentals to help your site actually get found.',
+  },
+  {
+    name: 'Website Hosting',
+    description: "Fast, reliable hosting and deployment, so you don't have to manage it yourself.",
+  },
+  {
+    name: 'IT Consulting',
+    description: 'General technology guidance and troubleshooting for small businesses.',
+  },
+  {
+    name: 'PC Building',
+    description: 'Custom-built PCs, put together around what you actually need them for.',
+  },
+  {
+    name: 'Light Technology Repair',
+    description:
+      'Common fixes like controller stick drift (PlayStation, Xbox, Switch). Not board-level micro-soldering or precision repair.',
+  },
+  {
+    name: 'Retool / Internal Tools',
+    description: 'Internal dashboards and business tools connected to your data -- built lightweight, not bloated.',
+  },
+]
+
 const alsoDoes = [
   {
     name: 'Lawn Care & Landscaping',
@@ -41,10 +74,6 @@ const alsoDoes = [
     description:
       'Home cooking and baking -- not professionally trained, just genuinely good at it. Recipes featured on The Hurd Blog.',
   },
-  {
-    name: 'Technology Repair',
-    description: 'PC and device repair -- troubleshooting, upgrades, and general tech support.',
-  },
 ]
 
 function App() {
@@ -55,6 +84,26 @@ function App() {
         <h1>Software engineering, plus a few other crafts.</h1>
         <p className="lede">A software engineer's shop -- web apps and internal tools.</p>
       </header>
+
+      <section className="block" aria-label="Services">
+        <div className="block-heading">
+          <h2>Services</h2>
+          <p>What Hurd Craft Co. offers.</p>
+        </div>
+        <div className="sites">
+          {offeredServices.map((service) => (
+            <a
+              key={service.name}
+              className="site-card"
+              href={`mailto:ryan@hurd.cc?subject=${encodeURIComponent(service.name + ' Inquiry')}`}
+            >
+              <h3>{service.name}</h3>
+              <p>{service.description}</p>
+              <span className="visit">Get in touch &rarr;</span>
+            </a>
+          ))}
+        </div>
+      </section>
 
       <section className="block" aria-label="Works">
         <div className="block-heading">
