@@ -59,6 +59,19 @@ const offeredServices = [
     name: 'Retool / Internal Tools',
     description: 'Internal dashboards and business tools connected to your data -- built lightweight, not bloated.',
   },
+  {
+    name: 'Backend / API Development',
+    description:
+      'Custom backend systems and APIs -- database design, multi-tenant architecture, and the infrastructure everything else runs on.',
+  },
+  {
+    name: 'Third-Party Integrations',
+    description: 'Connecting your site or tools to payment processors, tax systems, and other third-party APIs.',
+  },
+  {
+    name: 'AI-Assisted Tooling',
+    description: 'AI-integrated features and workflows -- built thoughtfully into a real tool, not bolted on as a gimmick.',
+  },
 ]
 
 const alsoDoes = [
@@ -73,6 +86,10 @@ const alsoDoes = [
     name: 'Cooking & Baking',
     description:
       'Home cooking and baking -- not professionally trained, just genuinely good at it. Recipes featured on The Hurd Blog.',
+  },
+  {
+    name: 'Smart Home Setup',
+    description: 'Home Assistant setup and smart home automation -- lock automation, presence detection, that kind of thing.',
   },
 ]
 
