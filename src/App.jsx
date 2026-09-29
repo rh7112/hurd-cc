@@ -7,7 +7,7 @@ const works = [
     description: 'IT consulting, PC repair, and custom computers -- built for Cruz Gregory.',
   },
   {
-    name: "Ryan's portfolio",
+    name: "Ryan Hurd's portfolio",
     href: 'https://ryan.hurd.cc',
     description: 'Software engineer -- Retool, SQL-driven workflows, and internal tools.',
   },
@@ -17,12 +17,12 @@ const works = [
     description: 'Family notes, projects, and the occasional recipe.',
   },
   {
-    name: "Ramona's portfolio",
+    name: "Ramona Bauch's portfolio",
     href: 'https://ramona.bauch.cc',
     description: 'Portfolio for Ramona Bauch, PA-C -- a Physician Assistant serving Northeastern Indiana.',
   },
   {
-    name: "Braden's portfolio",
+    name: "Braden Tucker's portfolio",
     href: 'https://braden.tucker.bid',
     description: 'Portfolio for Braden Tucker -- Bourbon Street Pizza, Bourbon, IN.',
   },
