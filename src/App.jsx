@@ -28,11 +28,11 @@ const works = [
   },
 ]
 
-const services = [
+const alsoDoes = [
   {
     name: 'Lawn Care & Landscaping',
     description:
-      "Mowing and landscaping upkeep for a home in the Barrington Addition, a gated community in Warsaw, IN -- mowed every 3-7 days to keep it looking sharp.",
+      "Mowing and landscaping upkeep for family, like this yard in the Barrington Addition (Warsaw, IN). Not something actively offered -- software engineering is the focus.",
     image: '/images/services/barrington-lawn-care-1.jpg',
     imageAlt: 'A freshly edged sidewalk and driveway in the Barrington Addition, Warsaw, IN',
   },
@@ -44,10 +44,7 @@ function App() {
       <header className="hero">
         <p className="eyebrow">Hurd Craft Co. LLC</p>
         <h1>Software engineering, plus a few other crafts.</h1>
-        <p className="lede">
-          A software engineer's shop -- web apps and internal tools, with lawn care and
-          landscaping on the side.
-        </p>
+        <p className="lede">A software engineer's shop -- web apps and internal tools.</p>
       </header>
 
       <section className="block" aria-label="Works">
@@ -66,24 +63,18 @@ function App() {
         </div>
       </section>
 
-      <section className="block" aria-label="Services">
+      <section className="block block-also" aria-label="Also does">
         <div className="block-heading">
-          <h2>Services</h2>
-          <p>Outside of software, a few other things Hurd Craft Co. offers.</p>
+          <h2>Also</h2>
+          <p>Not a service offering -- just something that comes up now and then.</p>
         </div>
         <div className="services">
-          {services.map((service) => (
-            <article key={service.name} className="service-card">
-              <img src={service.image} alt={service.imageAlt} loading="lazy" />
+          {alsoDoes.map((item) => (
+            <article key={item.name} className="service-card service-card-muted">
+              <img src={item.image} alt={item.imageAlt} loading="lazy" />
               <div className="service-card-body">
-                <h3>{service.name}</h3>
-                <p>{service.description}</p>
-                <a
-                  className="visit"
-                  href={`mailto:ryan@hurd.cc?subject=${encodeURIComponent(service.name)}%20Inquiry`}
-                >
-                  Get in touch &rarr;
-                </a>
+                <h3>{item.name}</h3>
+                <p>{item.description}</p>
               </div>
             </article>
           ))}
