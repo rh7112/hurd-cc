@@ -2,17 +2,17 @@ import './App.css'
 
 const works = [
   {
+    name: 'BBSystems.US',
+    href: 'https://bbsystems.us',
+    description: 'IT consulting, PC repair, and custom computers -- built for Cruz Gregory.',
+  },
+  {
     name: "Ryan's portfolio",
     href: 'https://ryan.hurd.cc',
     description: 'Software engineer -- Retool, SQL-driven workflows, and internal tools.',
   },
   {
-    name: "Alycia's portfolio",
-    href: 'https://alycia.hurd.cc',
-    description: "Alycia's work and projects.",
-  },
-  {
-    name: 'The blog',
+    name: 'The Hurd Blog',
     href: 'https://blog.hurd.cc',
     description: 'Family notes, projects, and the occasional recipe.',
   },
@@ -25,11 +25,6 @@ const works = [
     name: "Braden's portfolio",
     href: 'https://braden.tucker.bid',
     description: "Ryan's step-son -- Bourbon Street Pizza.",
-  },
-  {
-    name: 'BBSystems.US',
-    href: 'https://bbsystems.us',
-    description: 'IT consulting, PC repair, and custom computers -- built for Cruz Gregory.',
   },
 ]
 
