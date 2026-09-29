@@ -32,9 +32,18 @@ const alsoDoes = [
   {
     name: 'Lawn Care & Landscaping',
     description:
-      "Mowing and landscaping upkeep for family, like this yard in the Barrington Addition (Warsaw, IN). Not something actively offered -- software engineering is the focus.",
+      'Mowing and landscaping upkeep for family, like this yard in the Barrington Addition (Warsaw, IN).',
     image: '/images/services/barrington-lawn-care-1.jpg',
     imageAlt: 'A freshly edged sidewalk and driveway in the Barrington Addition, Warsaw, IN',
+  },
+  {
+    name: 'Cooking & Baking',
+    description:
+      'Home cooking and baking -- not professionally trained, just genuinely good at it. Recipes featured on The Hurd Blog.',
+  },
+  {
+    name: 'Technology Repair',
+    description: 'PC and device repair -- troubleshooting, upgrades, and general tech support.',
   },
 ]
 
@@ -66,12 +75,12 @@ function App() {
       <section className="block block-also" aria-label="Also does">
         <div className="block-heading">
           <h2>Also</h2>
-          <p>Not a service offering -- just something that comes up now and then.</p>
+          <p>A few things I don't actively offer, but would take on for the right price.</p>
         </div>
         <div className="services">
           {alsoDoes.map((item) => (
             <article key={item.name} className="service-card service-card-muted">
-              <img src={item.image} alt={item.imageAlt} loading="lazy" />
+              {item.image && <img src={item.image} alt={item.imageAlt} loading="lazy" />}
               <div className="service-card-body">
                 <h3>{item.name}</h3>
                 <p>{item.description}</p>
