@@ -1,4 +1,5 @@
 import './App.css'
+import ContactDetails from './ContactDetails.jsx'
 
 const works = [
   {
@@ -96,7 +97,7 @@ function App() {
         </div>
         <div className="hero-action">
           <p className="hero-action-label">Have something in mind?</p>
-          <a className="cta-button" href="mailto:ryan@hurd.cc?subject=Service%20Inquiry">
+          <a className="cta-button" href="/contact">
             Get in touch &rarr;
           </a>
         </div>
@@ -142,6 +143,7 @@ function App() {
         </ul>
       </section>
 
+      <ContactDetails />
       <hurd-footer tagline="Hurd Craft Co. LLC"></hurd-footer>
     </main>
   )
