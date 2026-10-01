@@ -1,5 +1,6 @@
 import './App.css'
 import ContactDetails from './ContactDetails.jsx'
+import Logo from './Logo.jsx'
 
 const works = [
   {
@@ -91,7 +92,9 @@ function App() {
     <main className="page">
       <header className="hero">
         <div className="hero-copy">
-          <p className="eyebrow">Hurd Craft Co. LLC</p>
+          <p className="eyebrow">
+            <Logo />
+          </p>
           <h1>Software engineering, plus a few other crafts.</h1>
           <p className="lede">A software engineer's shop -- web apps and internal tools.</p>
         </div>

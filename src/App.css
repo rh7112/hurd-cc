@@ -17,22 +17,33 @@
 
 .eyebrow {
   display: inline-flex;
-  align-items: center;
-  gap: 0.6em;
-  font-size: 0.8rem;
-  font-weight: 700;
-  letter-spacing: 0.22em;
-  text-transform: uppercase;
-  color: var(--accent);
-  margin-bottom: 1rem;
+  margin-bottom: 1.25rem;
 }
 
-.eyebrow::before {
-  content: '';
-  width: 1.5em;
-  height: 2px;
-  background: var(--accent-2);
-  border-radius: 1px;
+.eyebrow a {
+  display: inline-flex;
+  line-height: 0;
+}
+
+.logo-mark {
+  height: 30px;
+  width: auto;
+  overflow: visible;
+}
+
+.logo-mark-hurd {
+  font-family: var(--display);
+  font-weight: 700;
+  font-size: 24px;
+  fill: var(--accent-2);
+}
+
+.logo-mark-stack {
+  font-family: var(--sans);
+  font-weight: 700;
+  font-size: 8px;
+  letter-spacing: 0.06em;
+  fill: var(--accent);
 }
 
 .hero h1 {
