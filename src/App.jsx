@@ -97,43 +97,50 @@ function App() {
   return (
     <main className="page">
       <header className="hero">
-        <p className="eyebrow">Hurd Craft Co. LLC</p>
-        <h1>Software engineering, plus a few other crafts.</h1>
-        <p className="lede">A software engineer's shop -- web apps and internal tools.</p>
+        <div className="hero-copy">
+          <p className="eyebrow">Hurd Craft Co. LLC</p>
+          <h1>Software engineering, plus a few other crafts.</h1>
+          <p className="lede">A software engineer's shop -- web apps and internal tools.</p>
+        </div>
+        <div className="hero-action">
+          <p className="hero-action-label">Have something in mind?</p>
+          <a className="cta-button" href="mailto:ryan@hurd.cc?subject=Service%20Inquiry">
+            Get in touch &rarr;
+          </a>
+        </div>
       </header>
 
-      <section className="block" aria-label="Services">
+      <section className="index-block" aria-label="Services">
         <div className="block-heading">
           <h2>Services</h2>
           <p>What Hurd Craft Co. offers.</p>
         </div>
-        <div className="sites">
+        <ul className="index-list index-list-services">
           {offeredServices.map((service) => (
-            <article key={service.name} className="site-card site-card-static">
+            <li key={service.name} className="index-row">
               <h3>{service.name}</h3>
               <p>{service.description}</p>
-            </article>
+            </li>
           ))}
-        </div>
-        <a className="cta-button" href="mailto:ryan@hurd.cc?subject=Service%20Inquiry">
-          Get in touch &rarr;
-        </a>
+        </ul>
       </section>
 
-      <section className="block" aria-label="Works">
+      <section className="index-block" aria-label="Works">
         <div className="block-heading">
           <h2>Works</h2>
           <p>Sites and tools built by Hurd Craft Co.</p>
         </div>
-        <div className="sites">
+        <ul className="index-list index-list-works">
           {works.map((work) => (
-            <a key={work.href} className="site-card" href={work.href}>
-              <h3>{work.name}</h3>
-              <p>{work.description}</p>
-              <span className="visit">Visit &rarr;</span>
-            </a>
+            <li key={work.href} className="index-row">
+              <a href={work.href}>
+                <h3>{work.name}</h3>
+                <p>{work.description}</p>
+                <span className="visit">Visit &rarr;</span>
+              </a>
+            </li>
           ))}
-        </div>
+        </ul>
       </section>
 
       <section className="block block-also" aria-label="Also does">
@@ -141,7 +148,7 @@ function App() {
           <h2>Also</h2>
           <p>A few things I don't actively offer, but would take on for the right price.</p>
         </div>
-        <div className="services">
+        <div className="services-strip">
           {alsoDoes.map((item) => (
             <article key={item.name} className="service-card service-card-muted">
               {item.image && <img src={item.image} alt={item.imageAlt} loading="lazy" />}

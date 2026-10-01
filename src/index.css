@@ -1,13 +1,33 @@
 :root {
-  --text: #57534e;
-  --text-h: #1c1917;
-  --bg: #fafaf9;
-  --border: rgba(28, 25, 23, 0.1);
+  --text: #475569;
+  --text-h: #0f172a;
+  --bg: #f8fafc;
+  --border: rgba(15, 23, 42, 0.1);
   --card-bg: #ffffff;
-  --accent: #0f766e;
-  --accent-bg: rgba(15, 118, 110, 0.08);
+  /* Brand blue (#2563eb) -- identity accent (eyebrow/link text, hover
+     borders). Passes WCAG AA (~5.2:1) as text directly against --bg and
+     --card-bg, so it's used as-is rather than needing a darkened variant. */
+  --accent: #2563eb;
+  --accent-bg: rgba(37, 99, 235, 0.08);
+  /* Brand pumpkin orange, darkened to Tailwind's orange-700 (#c2410c) --
+     the raw brand hex (#e8600c) only reaches ~3.4:1 against white/card-bg,
+     which fails AA for text/button-label use at this size. This shade
+     clears ~5.2:1 while staying in the same hue family, so it's reserved
+     for the CTA button background (paired with light --bg text) rather
+     than used for small text directly. */
+  --accent-2: #c2410c;
 
-  --sans: system-ui, 'Segoe UI', Roboto, sans-serif;
+  /* hurd-footer (the shared <hurd-footer> web component) reads these
+     --color-* names, not the ones above -- alias them so the footer
+     actually picks up this site's palette instead of silently falling
+     back to its own hardcoded defaults. Same pattern bbsystems-us and
+     pestawaysolutions-us already use. */
+  --color-border: var(--border);
+  --color-text-muted: var(--text);
+  --color-accent: var(--accent);
+
+  --sans: 'Manrope', system-ui, 'Segoe UI', Roboto, sans-serif;
+  --display: 'Fraunces', Georgia, 'Times New Roman', serif;
 
   font: 18px/145% var(--sans);
   color-scheme: light dark;
@@ -21,13 +41,17 @@
 
 @media (prefers-color-scheme: dark) {
   :root {
-    --text: #a8a29e;
-    --text-h: #fafaf9;
-    --bg: #0c0a09;
+    --text: #94a3b8;
+    --text-h: #f8fafc;
+    --bg: #020617;
     --border: rgba(255, 255, 255, 0.1);
-    --card-bg: #1c1917;
-    --accent: #2dd4bf;
-    --accent-bg: rgba(45, 212, 191, 0.12);
+    --card-bg: #0f172a;
+    /* Brighter tints for dark-mode contrast, same relationship as before:
+       both clear ~7-8:1 against --bg and --card-bg, comfortably past AA
+       (and past AAA's 7:1) with room to spare. */
+    --accent: #60a5fa;
+    --accent-bg: rgba(96, 165, 250, 0.12);
+    --accent-2: #fb923c;
   }
 }
 
@@ -40,10 +64,12 @@ body {
 }
 
 h1,
-h2 {
-  font-family: var(--sans);
+h2,
+h3 {
+  font-family: var(--display);
   font-weight: 600;
-  line-height: 1.2;
+  line-height: 1.15;
+  letter-spacing: -0.01em;
   color: var(--text-h);
   margin: 0;
 }
