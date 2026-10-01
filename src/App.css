@@ -248,6 +248,20 @@
   aspect-ratio: 16 / 9;
 }
 
+.service-card-icon {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  aspect-ratio: 16 / 9;
+  background: var(--accent-bg);
+  color: var(--accent);
+}
+
+.service-card-icon svg {
+  width: 2.75rem;
+  height: 2.75rem;
+}
+
 .service-card-muted .service-card-body {
   padding: 1.25rem;
 }
