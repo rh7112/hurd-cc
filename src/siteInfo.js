@@ -3,6 +3,6 @@
 // footer-adjacent contact bar.
 export const phoneDisplay = '(352) 580-0408'
 export const phoneHref = 'tel:+13525800408'
-export const contactEmail = 'ryan@hurd.cc'
-export const contactEmailHref = 'mailto:ryan@hurd.cc'
+export const contactEmail = 'contact@hurd.cc'
+export const contactEmailHref = 'mailto:contact@hurd.cc'
 export const contactApiUrl = 'https://api.hurd.cc/api/v1/contact'
