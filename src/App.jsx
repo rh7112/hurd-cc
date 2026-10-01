@@ -53,7 +53,11 @@ const offeredServices = [
   {
     name: 'Light Technology Repair',
     description:
-      'Common fixes like controller stick drift (PlayStation, Xbox, Switch). Not board-level micro-soldering or precision repair.',
+      'Repairs for common consumer electronics issues, like worn joystick drift on game controllers and similar everyday wear-and-tear. Not board-level micro-soldering or precision repair.',
+  },
+  {
+    name: 'Smart Home Automation',
+    description: 'Home Assistant setup and smart home automation -- lock automation, presence detection, that kind of thing.',
   },
   {
     name: 'Retool / Internal Tools',
@@ -71,20 +75,6 @@ const offeredServices = [
   {
     name: 'AI-Assisted Tooling',
     description: 'AI-integrated features and workflows -- built thoughtfully into a real tool, not bolted on as a gimmick.',
-  },
-]
-
-const alsoDoes = [
-  {
-    name: 'Cooking & Baking',
-    description:
-      'Home cooking and baking -- not professionally trained, just genuinely good at it. Recipes featured on The Hurd Blog.',
-    image: 'https://blog.hurd.cc/api/recipe-images/recipes/2026-09-26-chicken-caesar-wraps-d5755e94.jpg',
-    imageAlt: 'Chicken Caesar wraps, a recipe from The Hurd Blog',
-  },
-  {
-    name: 'Smart Home Setup',
-    description: 'Home Assistant setup and smart home automation -- lock automation, presence detection, that kind of thing.',
   },
 ]
 
@@ -136,52 +126,6 @@ function App() {
             </li>
           ))}
         </ul>
-      </section>
-
-      <section className="block block-also" aria-label="Also does">
-        <div className="block-heading">
-          <h2>Also</h2>
-          <p>A few things I don't actively offer, but would take on for the right price.</p>
-        </div>
-        <div className="services-strip">
-          {alsoDoes.map((item) => (
-            <article key={item.name} className="service-card service-card-muted">
-              {item.image ? (
-                <img src={item.image} alt={item.imageAlt} loading="lazy" />
-              ) : (
-                <div className="service-card-icon" aria-hidden="true">
-                  <svg viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg">
-                    <path
-                      d="M8 22 24 9l16 13"
-                      stroke="currentColor"
-                      strokeWidth="2.5"
-                      strokeLinecap="round"
-                      strokeLinejoin="round"
-                    />
-                    <path
-                      d="M12 19v16a2 2 0 0 0 2 2h20a2 2 0 0 0 2-2V19"
-                      stroke="currentColor"
-                      strokeWidth="2.5"
-                      strokeLinecap="round"
-                      strokeLinejoin="round"
-                    />
-                    <circle cx="24" cy="28" r="3.5" stroke="currentColor" strokeWidth="2.5" />
-                    <path
-                      d="M18.5 22.5a8 8 0 0 1 11 0M15.5 19.5a12.5 12.5 0 0 1 17 0"
-                      stroke="currentColor"
-                      strokeWidth="2.2"
-                      strokeLinecap="round"
-                    />
-                  </svg>
-                </div>
-              )}
-              <div className="service-card-body">
-                <h3>{item.name}</h3>
-                <p>{item.description}</p>
-              </div>
-            </article>
-          ))}
-        </div>
       </section>
 
       <hurd-footer tagline="Hurd Craft Co. LLC"></hurd-footer>
