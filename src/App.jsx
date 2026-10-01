@@ -76,13 +76,6 @@ const offeredServices = [
 
 const alsoDoes = [
   {
-    name: 'Lawn Care & Landscaping',
-    description:
-      'Mowing and landscaping upkeep for family, like this yard in the Barrington Addition (Warsaw, IN).',
-    image: '/images/services/barrington-lawn-care-1.jpg',
-    imageAlt: 'A freshly edged sidewalk and driveway in the Barrington Addition, Warsaw, IN',
-  },
-  {
     name: 'Cooking & Baking',
     description:
       'Home cooking and baking -- not professionally trained, just genuinely good at it. Recipes featured on The Hurd Blog.',
