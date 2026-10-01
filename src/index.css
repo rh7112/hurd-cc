@@ -16,6 +16,10 @@
      for the CTA button background (paired with light --bg text) rather
      than used for small text directly. */
   --accent-2: #c2410c;
+  /* Semantic status colors, kept separate from the brand accents above --
+     green-700/red-600, both verified ~4.7-4.9:1 against --bg/--card-bg. */
+  --success: #15803d;
+  --error: #dc2626;
 
   /* hurd-footer (the shared <hurd-footer> web component) reads these
      --color-* names, not the ones above -- alias them so the footer
@@ -52,6 +56,9 @@
     --accent: #60a5fa;
     --accent-bg: rgba(96, 165, 250, 0.12);
     --accent-2: #fb923c;
+    /* green-400/red-400, both ~7-11:1 against the dark --bg/--card-bg. */
+    --success: #4ade80;
+    --error: #f87171;
   }
 }
 
