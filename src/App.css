@@ -152,6 +152,18 @@
   background: var(--accent-bg);
 }
 
+.index-list-works .index-row-static {
+  display: grid;
+  grid-template-columns: minmax(0, 15rem) 1fr;
+  gap: 1.5rem;
+  padding: 1.15rem 1rem;
+}
+
+.index-list-works .index-row-static:hover {
+  border-left-color: transparent;
+  background: none;
+}
+
 .index-list-works h3 {
   font-size: 1.05rem;
   font-weight: 600;
@@ -211,7 +223,8 @@ hurd-footer {
   }
 
   .index-list-services .index-row,
-  .index-list-works a {
+  .index-list-works a,
+  .index-list-works .index-row-static {
     grid-template-columns: 1fr;
     gap: 0.4rem;
   }

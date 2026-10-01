@@ -7,11 +7,6 @@ const works = [
     description: 'IT consulting, PC repair, and custom computers -- built for Cruz Gregory.',
   },
   {
-    name: "Ryan Hurd's portfolio",
-    href: 'https://ryan.hurd.cc',
-    description: 'Software engineer -- Retool, SQL-driven workflows, and internal tools.',
-  },
-  {
     name: 'The Hurd Blog',
     href: 'https://blog.hurd.cc',
     description: 'Family notes, projects, and the occasional recipe.',
@@ -22,9 +17,21 @@ const works = [
     description: 'Portfolio for Ramona Bauch, PA-C -- a Physician Assistant serving Northeastern Indiana.',
   },
   {
+    name: "Ryan Hurd's portfolio",
+    href: 'https://ryan.hurd.cc',
+    description: 'Software engineer -- Retool, SQL-driven workflows, and internal tools.',
+  },
+  {
+    name: "Alycia Hurd's portfolio",
+    // Private/noindexed by design -- no href, so this renders as plain
+    // text instead of a link (see the works.map below).
+    href: null,
+    description: 'Portfolio for Alycia Hurd -- Finance Business Analyst at Network Partners Group.',
+  },
+  {
     name: "Braden Tucker's portfolio",
     href: 'https://braden.tucker.bid',
-    description: 'Portfolio for Braden Tucker -- Bourbon Street Pizza, Bourbon, IN.',
+    description: "Portfolio for Braden Tucker -- Bourbon Street Pizza, Bourbon, IN. Still a work in progress.",
   },
 ]
 
@@ -116,15 +123,22 @@ function App() {
           <p>Sites and tools built by Hurd Craft Co.</p>
         </div>
         <ul className="index-list index-list-works">
-          {works.map((work) => (
-            <li key={work.href} className="index-row">
-              <a href={work.href}>
+          {works.map((work) =>
+            work.href ? (
+              <li key={work.name} className="index-row">
+                <a href={work.href}>
+                  <h3>{work.name}</h3>
+                  <p>{work.description}</p>
+                  <span className="visit">Visit &rarr;</span>
+                </a>
+              </li>
+            ) : (
+              <li key={work.name} className="index-row index-row-static">
                 <h3>{work.name}</h3>
                 <p>{work.description}</p>
-                <span className="visit">Visit &rarr;</span>
-              </a>
-            </li>
-          ))}
+              </li>
+            ),
+          )}
         </ul>
       </section>
 
