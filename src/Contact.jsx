@@ -2,6 +2,7 @@ import { useState } from 'react'
 import './App.css'
 import './Contact.css'
 import ContactDetails from './ContactDetails.jsx'
+import Logo from './Logo.jsx'
 import { phoneDisplay, phoneHref, contactApiUrl } from './siteInfo.js'
 
 function Contact() {
@@ -44,7 +45,9 @@ function Contact() {
     <main className="page">
       <header className="contact-hero">
         <p className="eyebrow">
-          <a href="/">Hurd Craft Co. LLC</a>
+          <a href="/">
+            <Logo />
+          </a>
         </p>
         <h1>Get in touch</h1>
         <p className="lede">
