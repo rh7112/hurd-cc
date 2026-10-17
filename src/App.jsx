@@ -73,6 +73,11 @@ const offeredServices = [
     description: 'Internal dashboards and business tools connected to your data -- built lightweight, not bloated.',
   },
   {
+    name: 'Business Profile Setup',
+    description:
+      'Google Business Profile, Yelp, and Apple Business Connect listings set up, verified, and kept accurate, so local customers can find you.',
+  },
+  {
     name: 'Backend / API Development',
     description:
       'Custom backend systems and APIs -- database design, multi-tenant architecture, and the infrastructure everything else runs on.',
