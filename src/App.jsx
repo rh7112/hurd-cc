@@ -75,7 +75,7 @@ const offeredServices = [
   {
     name: 'Business Profile Setup',
     description:
-      'Google Business Profile, Yelp, and Apple Business Connect listings set up, verified, and kept accurate, so local customers can find you.',
+      'Google Business Profile, Bing Places, Yelp, and Apple Business Connect listings set up, verified, and kept accurate, so local customers can find you.',
   },
   {
     name: 'Backend / API Development',
