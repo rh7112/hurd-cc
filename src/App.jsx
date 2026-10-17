@@ -35,6 +35,11 @@ const works = [
     href: 'https://braden.tucker.bid',
     description: "Portfolio for Braden Tucker -- Bourbon Street Pizza, Bourbon, IN. Still a work in progress.",
   },
+  {
+    name: 'Miretti Quality Construction',
+    href: 'https://maps.app.goo.gl/dNW28yciC2kRrxUH6?g_st=ac',
+    description: 'Google Business Profile setup for Miretti Quality Construction.',
+  },
 ]
 
 const offeredServices = [
