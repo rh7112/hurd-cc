@@ -1,25 +1,26 @@
 :root {
-  --text: #52665f;
-  --text-h: #162a25;
-  --bg: #f2efe4;
-  --border: rgba(22, 42, 37, 0.14);
-  --card-bg: #f8f6ee;
-  /* Forest green -- identity accent (links, pills, chips, dark bands).
-     Clears AA as text against --bg and --card-bg. */
-  --accent: #244c41;
-  --accent-bg: rgba(36, 76, 65, 0.09);
-  /* Dark band (CTA section) -- stays dark in both themes. */
-  --band-bg: #162a25;
-  --band-text: #f2efe4;
-  --band-muted: #bdcfc1;
-  --band-accent: #e0a48f;
+  --text: #475569;
+  --text-h: #0f172a;
+  --bg: #f8fafc;
+  --border: rgba(15, 23, 42, 0.1);
+  --card-bg: #ffffff;
+  /* Brand blue (#2563eb) -- identity accent (eyebrow/link text, hover
+     borders). Passes WCAG AA (~5.2:1) as text directly against --bg and
+     --card-bg, so it's used as-is rather than needing a darkened variant. */
+  --accent: #2563eb;
+  --accent-bg: rgba(37, 99, 235, 0.08);
+  /* Dark band (CTA section, hero diagram core) -- stays dark in both themes. */
+  --band-bg: #0f172a;
+  --band-text: #f8fafc;
+  --band-muted: #cbd5e1;
+  --band-accent: #fb923c;
   /* Brand pumpkin orange, darkened to Tailwind's orange-700 (#c2410c) --
      the raw brand hex (#e8600c) only reaches ~3.4:1 against white/card-bg,
      which fails AA for text/button-label use at this size. This shade
      clears ~5.2:1 while staying in the same hue family, so it's reserved
      for the CTA button background (paired with light --bg text) rather
      than used for small text directly. */
-  --accent-2: #a64f38;
+  --accent-2: #c2410c;
   /* Semantic status colors, kept separate from the brand accents above --
      green-700/red-600, both verified ~4.7-4.9:1 against --bg/--card-bg. */
   --success: #15803d;
@@ -49,18 +50,18 @@
 
 @media (prefers-color-scheme: dark) {
   :root {
-    --text: #b3c4b9;
-    --text-h: #f2efe4;
-    --bg: #0f1c19;
-    --border: rgba(242, 239, 228, 0.12);
-    --card-bg: #162a25;
-    --band-bg: #1d3830;
+    --text: #94a3b8;
+    --text-h: #f8fafc;
+    --bg: #020617;
+    --border: rgba(255, 255, 255, 0.1);
+    --card-bg: #0f172a;
+    --band-bg: #1e293b;
     /* Brighter tints for dark-mode contrast, same relationship as before:
        both clear ~7-8:1 against --bg and --card-bg, comfortably past AA
        (and past AAA's 7:1) with room to spare. */
-    --accent: #9fcbb6;
-    --accent-bg: rgba(159, 203, 182, 0.12);
-    --accent-2: #e0a48f;
+    --accent: #60a5fa;
+    --accent-bg: rgba(96, 165, 250, 0.12);
+    --accent-2: #fb923c;
     /* green-400/red-400, both ~7-11:1 against the dark --bg/--card-bg. */
     --success: #4ade80;
     --error: #f87171;
