@@ -42,59 +42,53 @@ const works = [
   },
 ]
 
-const offeredServices = [
+const serviceGroups = [
   {
-    name: 'Website Development',
+    name: 'Web & digital foundations',
     description:
-      'Custom websites built with modern frameworks (React, Next.js, Svelte) -- from small business marketing sites to full web apps.',
+      'A useful, durable digital home for your business -- custom sites and the backends behind them, built around what you need them to do.',
+    items: ['Website development', 'Backend / API development', 'Website hosting'],
   },
   {
-    name: 'SEO Optimization',
-    description: 'Structured data, meta tags, and technical fundamentals to help your site actually get found.',
-  },
-  {
-    name: 'Website Hosting',
-    description: "Fast, reliable hosting and deployment, so you don't have to manage it yourself.",
-  },
-  {
-    name: 'IT Consulting',
-    description: 'General technology guidance and troubleshooting for small businesses.',
-  },
-  {
-    name: 'PC Building',
-    description: 'Custom-built PCs, put together around what you actually need them for.',
-  },
-  {
-    name: 'Light Technology Repair',
+    name: 'Search & business presence',
     description:
-      'Repairs for common consumer electronics issues, like worn joystick drift on game controllers and similar everyday wear-and-tear. Not board-level micro-soldering or precision repair.',
+      'Make it easier for local customers to find your business and understand what you offer.',
+    items: ['SEO optimization', 'Business profile setup'],
   },
   {
-    name: 'Smart Home Automation',
-    description: 'Home Assistant setup and smart home automation -- lock automation, presence detection, that kind of thing.',
-  },
-  {
-    name: 'Retool / Internal Tools',
-    description: 'Internal dashboards and business tools connected to your data -- built lightweight, not bloated.',
-  },
-  {
-    name: 'Business Profile Setup',
+    name: 'Connected tools & systems',
     description:
-      'Google Business Profile, Bing Places, Yelp, and Apple Business Connect listings set up, verified, and kept accurate, so local customers can find you.',
+      'Bring your tools together, reduce repetitive work, and make room for better ways to work.',
+    items: ['IT consulting', 'Third-party integrations', 'Retool / internal tools', 'AI-assisted tooling'],
   },
   {
-    name: 'Backend / API Development',
+    name: 'Devices & smart spaces',
     description:
-      'Custom backend systems and APIs -- database design, multi-tenant architecture, and the infrastructure everything else runs on.',
+      'Practical hands-on technology help for the equipment and spaces you rely on every day.',
+    items: ['PC building', 'Light technology repair', 'Smart home automation'],
+  },
+]
+
+const steps = [
+  {
+    name: "Tell us what's going on",
+    description: 'Share the goal, the snag, or the part of your setup you would like to improve.',
   },
   {
-    name: 'Third-Party Integrations',
-    description: 'Connecting your site or tools to payment processors, tax systems, and other third-party APIs.',
+    name: 'Find a sensible next step',
+    description: "We'll get clear on what matters and shape the work around your needs.",
   },
   {
-    name: 'AI-Assisted Tooling',
-    description: 'AI-integrated features and workflows -- built thoughtfully into a real tool, not bolted on as a gimmick.',
+    name: 'Make it work in real life',
+    description: 'Build, connect, configure, or troubleshoot, with practical support along the way.',
   },
+]
+
+const orbitChips = [
+  { label: 'Websites', className: 'orbit-chip-a' },
+  { label: 'Search', className: 'orbit-chip-b' },
+  { label: 'Internal tools', className: 'orbit-chip-c' },
+  { label: 'Smart home', className: 'orbit-chip-d' },
 ]
 
 function App() {
@@ -103,52 +97,119 @@ function App() {
       <nav className="home-nav" aria-label="Primary">
         <Logo />
         <div className="home-nav-links">
-          <a href="#services">Services</a>
+          <a href="#services">What we do</a>
+          <a href="#approach">How we work</a>
           <a href="#works">Works</a>
           <a className="home-nav-cta" href="/contact">
-            Get in touch
+            Let&rsquo;s talk
           </a>
         </div>
       </nav>
 
       <header className="home-hero">
-        <p className="home-pill">Software engineering &middot; Web apps &middot; Internal tools</p>
-        <h1>
-          Software built to last, <em>plus a few other crafts.</em>
-        </h1>
-        <p className="home-lede">
-          Hurd Craft Co. builds websites, backends, and internal tools for small businesses, and keeps the tech around
-          them running.
-        </p>
-        <div className="home-hero-actions">
-          <a className="cta-button" href="/contact">
-            Tell me what you need &rarr;
-          </a>
-          <a className="home-link" href="#services">
-            Explore services
-          </a>
+        <div className="home-hero-copy">
+          <p className="home-pill">
+            <span className="home-dot" aria-hidden="true" />
+            Software + technology support, made practical
+          </p>
+          <h1>
+            A stronger foundation for <em>what&rsquo;s next.</em>
+          </h1>
+          <p className="home-lede">
+            Websites, backends, and hands-on tech help &mdash; thoughtfully built and shaped around the way you work.
+          </p>
+          <div className="home-hero-actions">
+            <a className="cta-button" href="/contact">
+              Tell us what you need &rarr;
+            </a>
+            <a className="home-link" href="#services">
+              Explore services
+            </a>
+          </div>
+          <p className="home-place">Supporting small businesses and individuals, based in Indiana.</p>
+        </div>
+
+        <div className="home-orbit" aria-hidden="true">
+          <div className="orbit-ring orbit-ring-outer" />
+          <div className="orbit-ring orbit-ring-inner" />
+          <div className="orbit-core">
+            <span className="orbit-core-brand">Hurd Craft Co.</span>
+            <span className="orbit-core-line">Technology, thoughtfully built.</span>
+          </div>
+          {orbitChips.map((chip) => (
+            <span key={chip.label} className={`orbit-chip ${chip.className}`}>
+              {chip.label}
+            </span>
+          ))}
         </div>
       </header>
 
+      <div className="home-strip">
+        <p>Good technology should make the everyday easier.</p>
+        <p>Clear advice. Useful work. Ongoing support.</p>
+      </div>
+
       <section id="services" className="home-section" aria-label="Services">
         <div className="home-heading">
-          <p className="home-kicker">What we do</p>
-          <h2>Services</h2>
+          <p className="home-kicker">A well-rounded toolkit</p>
+          <h2>
+            The right help for <em>the work in front of you.</em>
+          </h2>
+          <p className="home-sub">
+            From the first website to the small fixes that keep everything moving, Hurd Craft Co. brings digital and
+            everyday technology into one conversation.
+          </p>
         </div>
         <ul className="card-grid card-grid-services">
-          {offeredServices.map((service) => (
-            <li key={service.name} className="card">
-              <h3>{service.name}</h3>
-              <p>{service.description}</p>
+          {serviceGroups.map((group, i) => (
+            <li key={group.name} className="card">
+              <span className="card-num">{String(i + 1).padStart(2, '0')}</span>
+              <h3>{group.name}</h3>
+              <p>{group.description}</p>
+              <ul className="chip-list">
+                {group.items.map((item) => (
+                  <li key={item}>{item}</li>
+                ))}
+              </ul>
             </li>
           ))}
         </ul>
+        <p className="home-aside">
+          Something specific in mind?{' '}
+          <a className="home-link" href="/contact">
+            Tell us about it
+          </a>
+        </p>
+      </section>
+
+      <section id="approach" className="home-section" aria-label="How we work">
+        <div className="home-heading">
+          <p className="home-kicker">A straightforward way forward</p>
+          <h2>
+            Start <em>where you are.</em>
+          </h2>
+          <p className="home-sub">
+            No two setups are quite alike. We&rsquo;ll meet you with practical guidance and focus on what will make a
+            difference for you.
+          </p>
+        </div>
+        <ol className="card-grid card-grid-steps">
+          {steps.map((step, i) => (
+            <li key={step.name} className="card">
+              <span className="card-num">{String(i + 1).padStart(2, '0')}</span>
+              <h3>{step.name}</h3>
+              <p>{step.description}</p>
+            </li>
+          ))}
+        </ol>
       </section>
 
       <section id="works" className="home-section" aria-label="Works">
         <div className="home-heading">
           <p className="home-kicker">Selected projects</p>
-          <h2>Works</h2>
+          <h2>
+            Built by <em>Hurd Craft Co.</em>
+          </h2>
         </div>
         <ul className="card-grid card-grid-works">
           {works.map((work) =>
@@ -170,7 +231,20 @@ function App() {
         </ul>
       </section>
 
-      <ContactDetails />
+      <section className="home-cta" aria-label="Contact">
+        <p className="home-kicker">A good place to begin</p>
+        <h2>
+          What could work <em>a little better?</em>
+        </h2>
+        <p className="home-sub">
+          Tell us what you&rsquo;re building, what&rsquo;s not working, or what you&rsquo;d like to make simpler.
+        </p>
+        <a className="cta-button" href="/contact">
+          Get in touch &rarr;
+        </a>
+        <ContactDetails />
+      </section>
+
       <hurd-footer tagline="Hurd Craft Co. LLC"></hurd-footer>
     </main>
   )
