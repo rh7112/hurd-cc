@@ -101,7 +101,7 @@ function About() {
         <h2>
           Got something <em>in mind?</em>
         </h2>
-        <p className="home-sub">Tell me what you&rsquo;re working on. I reply within 1 business day.</p>
+        <p className="home-sub">Tell me what you&rsquo;re working on, and I&rsquo;ll get back to you as soon as I can.</p>
         <a className="cta-button" href="/contact">
           Get in touch &rarr;
         </a>

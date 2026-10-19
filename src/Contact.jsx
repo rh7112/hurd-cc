@@ -168,7 +168,7 @@ function Contact() {
 
             {status === 'sent' && (
               <p className="form-status form-status-success" role="status">
-                Thanks &mdash; your message is on its way. I&rsquo;ll reply by email within 1 business day.
+                Thanks &mdash; your message is on its way. I&rsquo;ll get back to you by email as soon as I can.
               </p>
             )}
             {status === 'error' && (
@@ -190,7 +190,7 @@ function Contact() {
           <div className="card">
             <h3>What happens next</h3>
             <ol className="aside-steps">
-              <li>I reply by email within 1 business day.</li>
+              <li>I reply by email as soon as I can.</li>
               <li>We talk through the goal and what makes sense to do first.</li>
               <li>You get a clear scope and price before any work starts.</li>
             </ol>
@@ -198,8 +198,8 @@ function Contact() {
           <div className="card">
             <h3>Where I work</h3>
             <p>
-              Based in Indiana, serving small businesses and individuals in Warsaw, Winona Lake, Syracuse, and the
-              rest of Kosciusko County &mdash; and remotely anywhere else.{' '}
+              Based in Indiana, serving small businesses and individuals in Kosciusko County and the surrounding
+              counties &mdash; and remotely anywhere else.{' '}
               <a href="/about">More about me &rarr;</a>
             </p>
           </div>
