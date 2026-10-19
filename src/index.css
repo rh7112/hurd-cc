@@ -9,6 +9,11 @@
      --card-bg, so it's used as-is rather than needing a darkened variant. */
   --accent: #2563eb;
   --accent-bg: rgba(37, 99, 235, 0.08);
+  /* Dark band (CTA section, hero diagram core) -- stays dark in both themes. */
+  --band-bg: #0f172a;
+  --band-text: #f8fafc;
+  --band-muted: #cbd5e1;
+  --band-accent: #fb923c;
   /* Brand pumpkin orange, darkened to Tailwind's orange-700 (#c2410c) --
      the raw brand hex (#e8600c) only reaches ~3.4:1 against white/card-bg,
      which fails AA for text/button-label use at this size. This shade
@@ -50,6 +55,7 @@
     --bg: #020617;
     --border: rgba(255, 255, 255, 0.1);
     --card-bg: #0f172a;
+    --band-bg: #1e293b;
     /* Brighter tints for dark-mode contrast, same relationship as before:
        both clear ~7-8:1 against --bg and --card-bg, comfortably past AA
        (and past AAA's 7:1) with room to spare. */
