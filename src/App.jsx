@@ -100,30 +100,44 @@ const offeredServices = [
 function App() {
   return (
     <main className="page">
-      <header className="hero">
-        <div className="hero-copy">
-          <p className="eyebrow">
-            <Logo />
-          </p>
-          <h1>Software engineering, plus a few other crafts.</h1>
-          <p className="lede">A software engineer's shop -- web apps and internal tools.</p>
+      <nav className="home-nav" aria-label="Primary">
+        <Logo />
+        <div className="home-nav-links">
+          <a href="#services">Services</a>
+          <a href="#works">Works</a>
+          <a className="home-nav-cta" href="/contact">
+            Get in touch
+          </a>
         </div>
-        <div className="hero-action">
-          <p className="hero-action-label">Have something in mind?</p>
+      </nav>
+
+      <header className="home-hero">
+        <p className="home-pill">Software engineering &middot; Web apps &middot; Internal tools</p>
+        <h1>
+          Software built to last, <em>plus a few other crafts.</em>
+        </h1>
+        <p className="home-lede">
+          Hurd Craft Co. builds websites, backends, and internal tools for small businesses, and keeps the tech around
+          them running.
+        </p>
+        <div className="home-hero-actions">
           <a className="cta-button" href="/contact">
-            Get in touch &rarr;
+            Tell me what you need &rarr;
+          </a>
+          <a className="home-link" href="#services">
+            Explore services
           </a>
         </div>
       </header>
 
-      <section className="index-block" aria-label="Services">
-        <div className="block-heading">
+      <section id="services" className="home-section" aria-label="Services">
+        <div className="home-heading">
+          <p className="home-kicker">What we do</p>
           <h2>Services</h2>
-          <p>What Hurd Craft Co. offers.</p>
         </div>
-        <ul className="index-list index-list-services">
+        <ul className="card-grid card-grid-services">
           {offeredServices.map((service) => (
-            <li key={service.name} className="index-row">
+            <li key={service.name} className="card">
               <h3>{service.name}</h3>
               <p>{service.description}</p>
             </li>
@@ -131,15 +145,15 @@ function App() {
         </ul>
       </section>
 
-      <section className="index-block" aria-label="Works">
-        <div className="block-heading">
+      <section id="works" className="home-section" aria-label="Works">
+        <div className="home-heading">
+          <p className="home-kicker">Selected projects</p>
           <h2>Works</h2>
-          <p>Sites and tools built by Hurd Craft Co.</p>
         </div>
-        <ul className="index-list index-list-works">
+        <ul className="card-grid card-grid-works">
           {works.map((work) =>
             work.href ? (
-              <li key={work.name} className="index-row">
+              <li key={work.name} className="card card-link">
                 <a href={work.href}>
                   <h3>{work.name}</h3>
                   <p>{work.description}</p>
@@ -147,7 +161,7 @@ function App() {
                 </a>
               </li>
             ) : (
-              <li key={work.name} className="index-row index-row-static">
+              <li key={work.name} className="card">
                 <h3>{work.name}</h3>
                 <p>{work.description}</p>
               </li>
