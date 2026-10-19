@@ -82,3 +82,89 @@
 .form-status-error {
   color: var(--error);
 }
+
+/* Richer layout: form beside a "what to expect" panel */
+
+.contact-layout {
+  display: grid;
+  grid-template-columns: minmax(0, 1.4fr) minmax(0, 1fr);
+  gap: clamp(2rem, 5vw, 4rem);
+  align-items: start;
+}
+
+.contact-layout .contact-hero,
+.contact-layout .contact-form {
+  max-width: none;
+}
+
+.contact-hero .home-kicker {
+  margin-bottom: 0.5rem;
+}
+
+.contact-hero h1 em {
+  font-style: italic;
+  color: var(--accent-2);
+}
+
+.contact-main {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+}
+
+.contact-aside {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+.contact-aside a {
+  color: var(--accent);
+}
+
+.aside-steps {
+  margin: 0;
+  padding-left: 1.2rem;
+  display: flex;
+  flex-direction: column;
+  gap: 0.4rem;
+  font-size: 0.95rem;
+  line-height: 1.55;
+}
+
+.form-row {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 1.25rem;
+}
+
+.form-optional {
+  font-weight: 400;
+  color: var(--text);
+}
+
+.form-field select {
+  font: inherit;
+  padding: 0.7rem 0.9rem;
+  border-radius: 0.6rem;
+  border: 1px solid var(--border);
+  background: var(--card-bg);
+  color: var(--text-h);
+}
+
+.form-field select:focus {
+  outline: 2px solid var(--accent);
+  outline-offset: 1px;
+}
+
+@media (max-width: 860px) {
+  .contact-layout {
+    grid-template-columns: 1fr;
+  }
+}
+
+@media (max-width: 560px) {
+  .form-row {
+    grid-template-columns: 1fr;
+  }
+}
