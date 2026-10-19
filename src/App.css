@@ -116,12 +116,18 @@
 }
 
 .home-hero {
+  display: grid;
+  grid-template-columns: minmax(0, 1.15fr) minmax(0, 1fr);
+  align-items: center;
+  gap: clamp(2rem, 5vw, 4rem);
+  padding-top: clamp(1.5rem, 5vw, 3.5rem);
+}
+
+.home-hero-copy {
   display: flex;
   flex-direction: column;
   align-items: flex-start;
   gap: 1.5rem;
-  padding-top: clamp(1.5rem, 5vw, 3.5rem);
-  max-width: 48rem;
 }
 
 .home-pill {
@@ -135,6 +141,15 @@
   font-weight: 700;
   letter-spacing: 0.08em;
   text-transform: uppercase;
+  align-items: center;
+  gap: 0.55rem;
+}
+
+.home-dot {
+  width: 0.5rem;
+  height: 0.5rem;
+  border-radius: 50%;
+  background: var(--accent-2);
 }
 
 .home-hero h1 {
@@ -266,6 +281,201 @@
   color: var(--accent-2);
 }
 
+.home-place {
+  font-size: 0.9rem;
+  color: var(--text);
+}
+
+.home-sub {
+  max-width: 40rem;
+  color: var(--text);
+}
+
+.home-heading h2 em,
+.home-cta h2 em {
+  font-style: italic;
+  color: var(--accent-2);
+}
+
+.home-aside {
+  font-size: 0.95rem;
+}
+
+.card-num {
+  font-family: var(--display);
+  font-size: 0.95rem;
+  font-style: italic;
+  color: var(--accent-2);
+}
+
+.card-grid-steps {
+  grid-template-columns: repeat(auto-fit, minmax(15rem, 1fr));
+}
+
+.chip-list {
+  list-style: none;
+  margin: 0.4rem 0 0;
+  padding: 0;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.4rem;
+}
+
+.chip-list li {
+  padding: 0.3rem 0.7rem;
+  border: 1px solid var(--border);
+  border-radius: 999px;
+  background: var(--accent-bg);
+  color: var(--accent);
+  font-size: 0.8rem;
+  font-weight: 600;
+}
+
+.home-strip {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  gap: 0.5rem 2rem;
+  padding: 1rem 0;
+  border-top: 1px solid var(--border);
+  border-bottom: 1px solid var(--border);
+  font-family: var(--display);
+  font-style: italic;
+  color: var(--text-h);
+}
+
+.home-cta {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 1.25rem;
+  padding: clamp(2.5rem, 7vw, 4.5rem) clamp(1.25rem, 5vw, 3rem);
+  border-radius: 1.75rem;
+  background: var(--band-bg);
+  text-align: center;
+}
+
+.home-cta h2 {
+  color: var(--band-text);
+  font-size: clamp(1.9rem, 4vw, 2.75rem);
+  font-weight: 500;
+}
+
+.home-cta .home-kicker,
+.home-cta h2 em {
+  color: var(--band-accent);
+}
+
+.home-cta .home-sub,
+.home-cta .contact-details {
+  color: var(--band-muted);
+}
+
+.home-cta .cta-button {
+  background: var(--band-accent);
+  color: var(--band-bg);
+}
+
+.home-cta .contact-details a:hover {
+  color: var(--band-text);
+}
+
+/* Hero diagram */
+
+.home-orbit {
+  position: relative;
+  width: min(100%, 26rem);
+  aspect-ratio: 1;
+  justify-self: center;
+}
+
+.orbit-ring {
+  position: absolute;
+  border: 1px dashed var(--border);
+  border-radius: 50%;
+}
+
+.orbit-ring-outer {
+  inset: 0;
+}
+
+.orbit-ring-inner {
+  inset: 16%;
+  background: var(--accent-bg);
+}
+
+.orbit-core {
+  position: absolute;
+  inset: 30%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 0.25rem;
+  padding: 0.75rem;
+  border-radius: 50%;
+  background: var(--band-bg);
+  color: var(--band-text);
+  text-align: center;
+}
+
+.orbit-core-brand {
+  font-family: var(--display);
+  font-size: clamp(1rem, 2.4vw, 1.25rem);
+  font-weight: 600;
+}
+
+.orbit-core-line {
+  font-size: 0.7rem;
+  color: var(--band-muted);
+}
+
+.orbit-chip {
+  position: absolute;
+  padding: 0.4rem 0.9rem;
+  border: 1px solid var(--border);
+  border-radius: 999px;
+  background: var(--card-bg);
+  color: var(--text-h);
+  font-size: 0.8rem;
+  font-weight: 700;
+  white-space: nowrap;
+  animation: orbit-float 6s ease-in-out infinite;
+}
+
+.orbit-chip-a {
+  top: 6%;
+  left: 12%;
+}
+
+.orbit-chip-b {
+  top: 18%;
+  right: 0;
+  animation-delay: -1.5s;
+}
+
+.orbit-chip-c {
+  bottom: 12%;
+  left: 0;
+  animation-delay: -3s;
+}
+
+.orbit-chip-d {
+  bottom: 4%;
+  right: 10%;
+  animation-delay: -4.5s;
+}
+
+@keyframes orbit-float {
+  0%,
+  100% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-6px);
+  }
+}
+
 .contact-details {
   margin-top: auto;
   display: flex;
@@ -307,10 +517,20 @@ html {
     scroll-behavior: auto;
   }
 
+  .orbit-chip {
+    animation: none;
+  }
+
   .card,
   .card-link:hover {
     transition: none;
     transform: none;
+  }
+}
+
+@media (max-width: 860px) {
+  .home-hero {
+    grid-template-columns: 1fr;
   }
 }
 
