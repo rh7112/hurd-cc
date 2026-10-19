@@ -100,6 +100,7 @@ function App() {
           <a href="#services">What we do</a>
           <a href="#approach">How we work</a>
           <a href="#works">Works</a>
+          <a href="/about">About</a>
           <a className="home-nav-cta" href="/contact">
             Let&rsquo;s talk
           </a>
