@@ -37,6 +37,7 @@ function About() {
         <Logo />
         <div className="home-nav-links">
           <a href="/">Home</a>
+          <a href="/faq">FAQ</a>
           <a className="home-nav-cta" href="/contact">
             Let&rsquo;s talk
           </a>
