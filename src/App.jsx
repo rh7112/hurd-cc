@@ -127,7 +127,7 @@ function App() {
               Explore services
             </a>
           </div>
-          <p className="home-place">Supporting small businesses and individuals, based in Indiana.</p>
+          <p className="home-place">Supporting small businesses and individuals anywhere. Based in Indiana.</p>
         </div>
 
         <div className="home-orbit" aria-hidden="true">

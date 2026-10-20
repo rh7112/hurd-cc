@@ -198,8 +198,8 @@ function Contact() {
           <div className="card">
             <h3>Where I work</h3>
             <p>
-              Based in Indiana, serving small businesses and individuals in Kosciusko County and the surrounding
-              counties &mdash; and remotely anywhere else.{' '}
+              Based in Indiana and working with small businesses and individuals anywhere &mdash; in person around
+              Kosciusko County and the surrounding counties, and remotely everywhere else.{' '}
               <a href="/about">More about me &rarr;</a>
             </p>
           </div>

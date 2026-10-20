@@ -50,7 +50,8 @@ function About() {
         </h1>
         <p className="lede">
           I&rsquo;m a software engineer based in Indiana. Hurd Craft Co. LLC is my own small business, where I help
-          small businesses and individuals with websites, internal tools, and everyday technology.
+          small businesses and individuals, wherever they are, with websites, internal tools, and everyday
+          technology.
         </p>
       </header>
 
