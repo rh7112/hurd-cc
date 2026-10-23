@@ -33,7 +33,7 @@ const works = [
   {
     name: "Braden Tucker's portfolio",
     href: 'https://braden.tucker.bid',
-    description: "Portfolio for Braden Tucker -- Bourbon Street Pizza, Bourbon, IN. Still a work in progress.",
+    description: "Portfolio for Braden Tucker -- Bourbon Street Pizza, Bourbon, IN.",
   },
   {
     name: 'Miretti Quality Construction',
